@@ -28,7 +28,7 @@ const projectsData = [
     title: "Solution 250",
     description: "Web application for analyzing feedback for e-commerce using NLP.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web","Data"],
+    tag: ["All","Data"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -60,6 +60,9 @@ const ProjectsSection = () => {
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
+    controls.start("hidden").then(() => {
+      controls.start("visible");
+    });
   };
 
   const filteredProjects = projectsData.filter((project) =>
@@ -78,7 +81,6 @@ const ProjectsSection = () => {
           if (entry.isIntersecting) {
             controls.start("visible");
           } else {
-            // Commencer l'animation de disparition dès que la section commence à sortir de la vue
             if (entry.boundingClientRect.top > 0) {
               controls.start("hidden");
             }
@@ -87,7 +89,7 @@ const ProjectsSection = () => {
       },
       {
         root: null,
-        rootMargin: "-50% 0px -50% 0px", // Ajuster cette valeur pour contrôler quand l'animation commence
+        rootMargin: "-30% 0px 0px 0px",
         threshold: 0,
       }
     );
@@ -145,12 +147,11 @@ const ProjectsSection = () => {
       >
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             transition={{ duration: 0.3 }}
           >
             <ProjectCard
-              key={project.id}
               title={project.title}
               description={project.description}
               imgUrl={project.image}

@@ -5,6 +5,16 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+export function smoothScroll(e) {
+  e.preventDefault();
+  const href = e.currentTarget.getAttribute('href');
+  const targetId = href.replace(/.*\#/, "");
+  const elem = document.getElementById(targetId);
+  elem?.scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -38,18 +48,19 @@ const HeroSection = () => {
           Dedicated to turning ideas into reality with code.
           </p>
           <div>
+          <Link
+  href="/#contact"
+  onClick={smoothScroll}
+  className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-200 text-white transition-all duration-300"
+>
+  Hire Me
+</Link>
             <Link
-              href="/#contact"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-200 text-white"
-            >
-              Hire Me
-            </Link>
-            <Link
-              href="/"
+              href="https://www.canva.com/design/DAGPPA3m3VA/UXscvhrO2qcgFJqB_1zIUg/view?utm_content=DAGPPA3m3VA&utm_campaign=designshare&utm_medium=link&utm_source=editor"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
+                Check my CV
               </span>
             </Link>
           </div>
