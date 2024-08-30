@@ -4,6 +4,7 @@ import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
+import { useI18n } from "../../locales/client";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -47,6 +48,8 @@ const EmailSection = () => {
     }
   };
 
+  const t = useI18n();
+
   return (
     <section
       id="contact"
@@ -54,12 +57,11 @@ const EmailSection = () => {
     >
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
+          {t("connect")}
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          {t("connectcontent")}
+        
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/cleophass">
@@ -84,7 +86,7 @@ const EmailSection = () => {
               htmlFor="email"
               className="text-white block mb-2 text-sm font-medium"
             >
-              Your email
+              {t("mail")}
             </label>
             <input
               name="email"
@@ -100,7 +102,7 @@ const EmailSection = () => {
               htmlFor="subject"
               className="text-white block text-sm mb-2 font-medium"
             >
-              Subject
+              {t("subject")}
             </label>
             <input
               name="subject"
@@ -108,7 +110,8 @@ const EmailSection = () => {
               id="subject"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Just saying hi"
+              placeholder=              {t("subjectplaceholder")}
+
             />
           </div>
           <div className="mb-6">
@@ -123,16 +126,18 @@ const EmailSection = () => {
               id="message"
               required
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="Let's talk about..."
+              placeholder=              {t("messageplaceholder")}
+
             />
           </div>
           <button
-            type="submit"
-            className="bg-blue-400 hover:bg-blue-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
-            disabled={loading}
-          >
-            {loading ? 'Sending...' : 'Send Message'}
-          </button>
+  type="submit"
+  className="bg-blue-400 hover:bg-blue-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+  disabled={loading}
+>
+  {loading ? 'Sending...' : t("send")}
+</button>
+
         </form>
       </div>
     </section>

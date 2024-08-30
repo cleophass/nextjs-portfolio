@@ -1,0 +1,27 @@
+import { send } from "process";
+
+export default {
+    hello: "Hello I'm",
+    herotitle: "Dedicated to turning ideas into reality with code.",
+    cv: "Download my CV",
+    hire : "Hire me",
+    abouttitle: "About me",
+    aboutcontent : "I love working on projects that involve data manipulation, visualization, and building machine learning models, skills I picked up during my studies. I'm also really into web development because I enjoy creating apps that can be useful to me, like one for tracking my workout progress. Outside of tech, I'm really into sports, whether it's weightlifting, running, or gymnastics, I'm all about pushing myself and staying active!",
+    efrei : "EFREI - School of Digital Engineering, with a specialization in Big Data and Artificial Intelligence, International Program",
+    apu : "Asia Pacific University of Technology & Innovation (APU), Malaysia",
+    voltaire: "Voltaire Certification (Business Spelling)",
+    project:"My projects",
+    p1:"Web application for music recommendation using machine learning models.",
+    p2:"Mobile application for tracking sports performance",
+    p3:"Web application for analyzing feedback for e-commerce using NLP.",
+    p4:"Scorify is a tool for managing contracts that helps teams, contracts, deals, and suppliers through a unique scoring system. It makes decision-making easier by giving a clear, data-driven view of how well everything is performing.",
+    p5:"Our team developed an app that predicts and analyzes station crowd levels to optimize the network. Users can enter their location and departure time to receive forecasts of crowd levels at nearby stations and the current status of available Vélib stations.",
+    connect:"Let's Connect",
+    connectcontent:"I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
+    mail : "Your Email",
+    subject : "Subject",
+    subjectplaceholder:"Just saying hi",
+    messageplaceholder:"Let's talk about...",
+    send:"Send Message",
+
+}as const; 
