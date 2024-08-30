@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/components/EmailSection.jsx", "src/app/components/AboutSection.jsx"  ],
+, "src/app/components/EmailSection.jsx", "src/app/components/AboutSection.jsx", "src/app/components/LocaleSelect.jsx"  ],
   "exclude": [
     "node_modules"
   ]
