@@ -1,19 +1,23 @@
-"use client";
-import { useCurrentLocale, useChangeLocale } from "../../locales/client";
+import React from 'react';
 
-export const LocaleSelect = () => {
-    const locale = useCurrentLocale();
-    console.log(locale);
-    const changeLocale = useChangeLocale();
+type Locale = "fr" | "en";
 
-    return (
-        <select
-            className="bg-transparent border-gray-50 rounded-md px-2 py-1 text-2xl focus:outline-none"
-            value={locale} // Correctly place the value attribute here
-            onChange={(e) => changeLocale(e.target.value as "fr" | "en")}
-        >
-            <option value="en">🇬🇧</option>
-            <option value="fr">🇫🇷</option>
-        </select>
-    );
+interface LocaleSelectProps {
+  locale: Locale;
+  changeLocale: (newLocale: Locale) => void;
+}
+
+const LocaleSelect: React.FC<LocaleSelectProps> = ({ locale, changeLocale }) => {
+  return (
+    <select
+      className="bg-transparent border-gray-50 rounded-md px-2 py-1 text-2xl focus:outline-none"
+      value={locale}
+      onChange={(e) => changeLocale(e.target.value as Locale)}
+    >
+      <option value="en">🇬🇧</option>
+      <option value="fr">🇫🇷</option>
+    </select>
+  );
 };
+
+export default LocaleSelect;
