@@ -22,8 +22,6 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">{t("abouttitle")}</h2>
           <p className="text-base lg:text-lg">{t("aboutcontent")}
-            I love working on projects that involve data manipulation, visualization, and building machine learning models, skills I picked up during my studies. I&apos;m also really into web development because I enjoy creating apps that can be useful to me, like one for tracking my workout progress. Outside of tech, 
-            I&apos;m really into sports, whether it&apos;s weightlifting, running, or gymnastics, I&apos;m all about pushing myself and staying active!
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
