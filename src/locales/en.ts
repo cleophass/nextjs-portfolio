@@ -16,6 +16,8 @@ export default {
     p3:"Web application for analyzing feedback for e-commerce using NLP.",
     p4:"Scorify is a tool for managing contracts that helps teams, contracts, deals, and suppliers through a unique scoring system. It makes decision-making easier by giving a clear, data-driven view of how well everything is performing.",
     p5:"Our team developed an app that predicts and analyzes station crowd levels to optimize the network. Users can enter their location and departure time to receive forecasts of crowd levels at nearby stations and the current status of available Vélib stations.",
+    p6:"Geets is a collaborative platform that allows users to share their personal projects, build teams, and work together to bring their ideas to life by connecting people with complementary skills.",
+    
     connect:"Let's Connect",
     connectcontent:"I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!",
     mail : "Your Email",

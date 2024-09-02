@@ -100,30 +100,20 @@ const ProjectsSection = () => {
               title="TADAI"
               description={t("p1")}
               imgUrl="/images/projects/1.png"
-              gitUrl="/"
-              previewUrl="/"
+              gitUrl="https://github.com/cleophass/tadai"
+              previewUrl="https://www.youtube.com/watch?v=XY3lPJDG1sE"
             />
           </motion.li>
         )}
-        {(tag === "All" || tag === "Web") && (
-          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
-            <ProjectCard
-              title="BodyScan"
-              description={t("p2")}
-              imgUrl="/images/projects/2.png"
-              gitUrl="/"
-              previewUrl="/"
-            />
-          </motion.li>
-        )}
+        
         {(tag === "All" || tag === "Data") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title="Solution 250"
               description={t("p3")}
               imgUrl="/images/projects/3.png"
-              gitUrl="/"
-              previewUrl="/"
+              gitUrl="https://github.com/jeandtx/Solution250?tab=readme-ov-file"
+              previewUrl="https://www.youtube.com/watch?v=PqscHXQ4oxM"
             />
           </motion.li>
         )}
@@ -133,8 +123,8 @@ const ProjectsSection = () => {
               title="Scorify"
               description={t("p4")}
               imgUrl="/images/projects/4.png"
-              gitUrl="/"
-              previewUrl="/"
+              gitUrl="https://github.com/cleophass/Scorify"
+              previewUrl="https://scorify-cleophass-projects.vercel.app/"
             />
           </motion.li>
         )}
@@ -144,6 +134,28 @@ const ProjectsSection = () => {
               title={t("Hackathon Cloud Computing")}
               description={t("p5")}
               imgUrl="/images/projects/5.png"
+              gitUrl="/"
+              previewUrl="https://hackathon-transports.streamlit.app/Autour_de_chez_vous"
+            />
+          </motion.li>
+        )}
+        {(tag === "All" || tag === "Data") && (
+          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
+            <ProjectCard
+              title={t("Geets")}
+              description={t("p6")}
+              imgUrl="/images/projects/6.png"
+              gitUrl="https://github.com/jeandtx/geets/"
+              previewUrl="https://mongodb-starter-red-eight.vercel.app/"
+            />
+          </motion.li>
+        )}
+        {(tag === "All" || tag === "Web") && (
+          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
+            <ProjectCard
+              title="BodyScan"
+              description={t("p2")}
+              imgUrl="/images/projects/2.png"
               gitUrl="/"
               previewUrl="/"
             />
