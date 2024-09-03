@@ -1,8 +1,9 @@
 import React from "react";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { DockDemo } from "./DockDemo";
 
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl,iconIds }) => {
   return (
     <div>
       <div
@@ -24,9 +25,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           </Link>
         </div>
       </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
+      <div className="text-white rounded-b-xl mt-3 bg-[#212121] py-6 px-4 ">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <p className="text-[#ADB7BE] h-24 overflow-hidden text-justify">{description}</p>
+        <div className="w-full border-t-2 bg-white rounded-s-xl my-6"></div>
+        <DockDemo iconIds={iconIds} />
       </div>
     </div>
   );

@@ -102,6 +102,7 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/1.png"
               gitUrl="https://github.com/cleophass/tadai"
               previewUrl="https://www.youtube.com/watch?v=XY3lPJDG1sE"
+              iconIds={[1,2,4,8]}
             />
           </motion.li>
         )}
@@ -114,6 +115,8 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/3.png"
               gitUrl="https://github.com/jeandtx/Solution250?tab=readme-ov-file"
               previewUrl="https://www.youtube.com/watch?v=PqscHXQ4oxM"
+              iconIds={[1,2,4,8]}
+
             />
           </motion.li>
         )}
@@ -125,6 +128,7 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/4.png"
               gitUrl="https://github.com/cleophass/Scorify"
               previewUrl="https://scorify-cleophass-projects.vercel.app/"
+              iconIds={[3,9]}
             />
           </motion.li>
         )}
@@ -136,6 +140,7 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/5.png"
               gitUrl="/"
               previewUrl="https://hackathon-transports.streamlit.app/Autour_de_chez_vous"
+              iconIds={[4,5]}
             />
           </motion.li>
         )}
@@ -147,6 +152,7 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/6.png"
               gitUrl="https://github.com/jeandtx/geets/"
               previewUrl="https://mongodb-starter-red-eight.vercel.app/"
+              iconIds={[2,6,7,8,9,10]}
             />
           </motion.li>
         )}
@@ -158,8 +164,23 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/2.png"
               gitUrl="/"
               previewUrl="/"
+              iconIds={[2,7,8,10,11]}
             />
           </motion.li>
+
+        )}
+        {(tag === "All" || tag === "Data") && (
+          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
+            <ProjectCard
+              title="Image Segmentation DBSCAN"
+              description={t("p7")}
+              imgUrl="/images/projects/7.png"
+              gitUrl="https://github.com/cleophass/Application-of-DBSCAN-Clustering-on-Satellite-Imagery-of-Venice"
+              previewUrl="/notebook.html"
+              iconIds={[4,13,14,15]}
+            />
+          </motion.li>
+          
         )}
       </motion.ul>
     </section>
