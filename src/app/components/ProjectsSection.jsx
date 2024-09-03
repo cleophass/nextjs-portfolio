@@ -176,7 +176,7 @@ const ProjectsSection = () => {
               description={t("p7")}
               imgUrl="/images/projects/7.png"
               gitUrl="https://github.com/cleophass/Application-of-DBSCAN-Clustering-on-Satellite-Imagery-of-Venice"
-              previewUrl="/notebook.html"
+              previewUrl="/fr/notebook.html"
               iconIds={[4,13,14,15]}
             />
           </motion.li>
