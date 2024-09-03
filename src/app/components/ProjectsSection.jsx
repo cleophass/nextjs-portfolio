@@ -140,7 +140,7 @@ const ProjectsSection = () => {
               imgUrl="/images/projects/5.png"
               gitUrl="/"
               previewUrl="https://hackathon-transports.streamlit.app/Autour_de_chez_vous"
-              iconIds={[4,5]}
+              iconIds={[4,5,16]}
             />
           </motion.li>
         )}

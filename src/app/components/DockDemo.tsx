@@ -19,6 +19,7 @@ const icons = {
   13:"icon/sklearn.svg",
   14:"icon/jupyter.png",
   15:"icon/numpy.svg",
+  16:"icon/azure.png"
 };
 
 
