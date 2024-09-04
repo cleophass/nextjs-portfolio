@@ -4,15 +4,16 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useI18n, useScopedI18n } from '../../locales/client'
+import { useI18n, useScopedI18n } from "../../locales/client";
+import DownloadButton from "./CvButton";
 
 export function smoothScroll(e) {
   e.preventDefault();
-  const href = e.currentTarget.getAttribute('href');
+  const href = e.currentTarget.getAttribute("href");
   const targetId = href.replace(/.*\#/, "");
   const elem = document.getElementById(targetId);
   elem?.scrollIntoView({
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
 
@@ -28,8 +29,8 @@ const HeroSection = () => {
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
-          {t("hello")}{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
+              {t("hello")}{" "}
             </span>
             <br></br>
             <TypeAnimation
@@ -47,24 +48,26 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          {t("herotitle")}
+            {t("herotitle")}
           </p>
-          <div>
-          <Link
-  href="/#contact"
-  onClick={smoothScroll}
-  className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-200 text-white transition-all duration-300"
->
-{t("hire")}
-</Link>
+          <div className="sm:flex sm:flex-row flex-col sm:space-y-0 space-y-4">
             <Link
-              href="https://www.canva.com/design/DAGPPA3m3VA/UXscvhrO2qcgFJqB_1zIUg/view?utm_content=DAGPPA3m3VA&utm_campaign=designshare&utm_medium=link&utm_source=editor"
+              href="/#contact"
+              onClick={smoothScroll}
+              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-200 text-white transition-all duration-300"
+            >
+              {t("hire")}
+            </Link>
+            <DownloadButton />
+
+            {/* <Link
+              href="/cv.pdf"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-blue-400 to-blue-600 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 {t("cv")}
               </span>
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
         <motion.div

@@ -4,7 +4,11 @@ export default {
     hello: "Hello I'm",
     herotitle: "Dedicated to turning ideas into reality with code.",
     cv: "Download my CV",
+    about :"About",
     hire : "Hire me",
+    projecttitle:"Projects",
+    skillstitle:"My skills",
+
     abouttitle: "About me",
     aboutcontent : "I love working on projects that involve data manipulation, visualization, and building machine learning models, skills I picked up during my studies. I'm also really into web development because I enjoy creating apps that can be useful to me, like one for tracking my workout progress. Outside of tech, I'm really into sports, whether it's weightlifting, running, or gymnastics, I'm all about pushing myself and staying active!",
     efrei : "EFREI - School of Digital Engineering, with a specialization in Big Data and Artificial Intelligence, International Program",
@@ -25,5 +29,8 @@ export default {
     subjectplaceholder:"Just saying hi",
     messageplaceholder:"Let's talk about...",
     send:"Send Message",
+    skills:"Skills",
+    education:"Education",
+    all:"All",
 
 }as const; 

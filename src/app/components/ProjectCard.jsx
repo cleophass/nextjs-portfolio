@@ -5,7 +5,7 @@ import { DockDemo } from "./DockDemo";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl,iconIds }) => {
   return (
-    <div>
+    <div> 
       <div
         className="h-52 md:h-72 rounded-t-xl relative group"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}

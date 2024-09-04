@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import LocaleSelect from "./LocaleSelect";
+import { useI18n } from "../../locales/client";
 
 const navLinks = [
   {
@@ -22,6 +23,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const t = useI18n();
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
@@ -48,11 +50,21 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:space-x-8">
             <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-              {navLinks.map((link, index) => (
+              {/* {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink href={link.path} title={link.title} />
                 </li>
-              ))}
+              ))} */}
+              <li>
+                <NavLink href="#about" title={t("about")} />
+              </li>
+              <li>
+                <NavLink href="#projects" title={t("projecttitle")} />
+              </li>
+              <li>
+                <NavLink href="#contact" title="Contact" />
+              </li>
+
             </ul>
           </div>
 

@@ -62,7 +62,7 @@ const ProjectsSection = () => {
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={() => handleTagChange("All")}
-          name="All"
+          name={t("all")}
           isSelected={tag === "All"}
         />
         <ProjectTag
@@ -106,39 +106,13 @@ const ProjectsSection = () => {
             />
           </motion.li>
         )}
-        
-        {(tag === "All" || tag === "Data") && (
-          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
-            <ProjectCard
-              title="Solution 250"
-              description={t("p3")}
-              imgUrl="/images/projects/3.png"
-              gitUrl="https://github.com/jeandtx/Solution250?tab=readme-ov-file"
-              previewUrl="https://www.youtube.com/watch?v=PqscHXQ4oxM"
-              iconIds={[1,2,4,8]}
-
-            />
-          </motion.li>
-        )}
-        {(tag === "All" || tag === "Web") && (
-          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
-            <ProjectCard
-              title="Scorify"
-              description={t("p4")}
-              imgUrl="/images/projects/4.png"
-              gitUrl="https://github.com/cleophass/Scorify"
-              previewUrl="https://scorify-cleophass-projects.vercel.app/"
-              iconIds={[3,9]}
-            />
-          </motion.li>
-        )}
         {(tag === "All" || tag === "Data") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title={t("Hackathon Cloud Computing")}
               description={t("p5")}
               imgUrl="/images/projects/5.png"
-              gitUrl="/"
+              gitUrl="https://hackathon-transports.streamlit.app/Autour_de_chez_vous"
               previewUrl="https://hackathon-transports.streamlit.app/Autour_de_chez_vous"
               iconIds={[4,5,16]}
             />
@@ -156,14 +130,29 @@ const ProjectsSection = () => {
             />
           </motion.li>
         )}
+        {(tag === "All" || tag === "Data") && (
+          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
+            <ProjectCard
+              title="Solution 250"
+              description={t("p3")}
+              imgUrl="/images/projects/3.png"
+              gitUrl="https://github.com/jeandtx/Solution250?tab=readme-ov-file"
+              previewUrl="https://www.youtube.com/watch?v=PqscHXQ4oxM"
+              iconIds={[1,2,4,8]}
+
+            />
+          </motion.li>
+        )}
+        
+        
         {(tag === "All" || tag === "Web") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title="BodyScan"
               description={t("p2")}
               imgUrl="/images/projects/2.png"
-              gitUrl="/"
-              previewUrl="/"
+              gitUrl="https://github.com/cleophass/bodyscan_2"
+              previewUrl="https://youtube.com/shorts/_TyAym5NU9M"
               iconIds={[2,7,8,10,11]}
             />
           </motion.li>
@@ -182,6 +171,18 @@ const ProjectsSection = () => {
           </motion.li>
           
         )}
+        {/* {(tag === "All" || tag === "Web") && (
+          <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
+            <ProjectCard
+              title="Scorify"
+              description={t("p4")}
+              imgUrl="/images/projects/4.png"
+              gitUrl="https://github.com/cleophass/Scorify"
+              previewUrl="https://scorify-cleophass-projects.vercel.app/"
+              iconIds={[3,9]}
+            />
+          </motion.li>
+        )} */}
       </motion.ul>
     </section>
   );
