@@ -94,7 +94,7 @@ const ProjectsSection = () => {
           },
         }}
       >
-        {(tag === "All" || tag === "Data") && (
+        {(tag === "All" || tag === "Data" || tag === "Web") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title="TADAI"
@@ -118,7 +118,7 @@ const ProjectsSection = () => {
             />
           </motion.li>
         )}
-        {(tag === "All" || tag === "Data") && (
+        {(tag === "All" || tag === "Data" || tag === "Web") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title={t("Geets")}
@@ -130,7 +130,7 @@ const ProjectsSection = () => {
             />
           </motion.li>
         )}
-        {(tag === "All" || tag === "Data") && (
+        {(tag === "All" || tag === "Data" || tag === "Web") && (
           <motion.li variants={cardVariants} transition={{ duration: 0.3 }}>
             <ProjectCard
               title="Solution 250"
