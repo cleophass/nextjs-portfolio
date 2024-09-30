@@ -48,7 +48,7 @@ const AboutSection = () => {
               <ul className="list-disc pl-2">
                 <li>Python (Pandas, Matlplotlib, Numpy, Keras, Sklearn & TensorFlow)</li>
                 <li>Database SQL and NoSQL (MongoDB, PostgreSQL, Cassandra & Neo4j)</li>
-                <li>JavaScrip (Next, React, Vite)</li>
+                <li>React (Next, Vite)</li>
                 <li>Git (GitHub & GitLab)</li>
               </ul>
             )}
